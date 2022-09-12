@@ -1,23 +1,23 @@
 package main;
 
-import java.awt.Color;
-
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class Main {
 
-    static JLabel l;
-
     public static void main(String[] args) {
+        
+        ImageIcon image = new ImageIcon("./frogs/frog.jpg");
+
+        JLabel label = new JLabel();
+        label.setText("text");
+        label.setIcon(image);
 
         JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500,500);
         frame.setVisible(true);
-        frame.setSize(500, 500);
-        JLabel label1 = new JLabel("Test");
-        l = new JLabel("panel label");
-        label1.setText("Label Text");
-        frame.getContentPane().setBackground(Color.YELLOW);
+        frame.add(label);
     }
-
 }
